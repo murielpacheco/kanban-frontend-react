@@ -1,26 +1,21 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background-color: #F3F4F6;
+  background-color: #f3f4f6;
   width: 260px;
   height: 440px;
   margin: 2rem;
   padding: 1rem;
   border-radius: 10px;
-  box-shadow: 4px 4px 10px #333;
-  overflow-y: scroll;
+  box-shadow: 1px 1px 5px rgb(180, 155, 256);
+  overflow-y: auto;
+  position: relative;
 
   ::-webkit-scrollbar {
     width: 8px;
   }
   ::-webkit-scrollbar-thumb {
-    background: rgb(74, 73, 70);
-    background: linear-gradient(
-      135deg,
-      rgba(74, 73, 70, 1) 2%,
-      rgba(160, 157, 152, 1) 96%,
-      rgba(165, 162, 157, 1) 100%
-    );
+    background: rgb(60, 130, 246);
     border-radius: 4px;
   }
   ::-webkit-scrollbar-track {
@@ -52,14 +47,4 @@ export const ListTag = styled.div`
       : props.tag === 2
       ? 'green'
       : 'blue'};
-`;
-
-export const Footer = styled.textarea`
-  width: 80%;
-`;
-
-export const Addtask = styled.button`
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
 `;

@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { api } from '../../services/api';
 import {Card} from '../Card';
-import { Container, ListTag, Header, Footer, Addtask} from './styles';
+import {FormAdd} from '../FormAdd'
+import { Container, ListTag, Header} from './styles';
 
 function List({title, tag}) {
   const [message, setMessage] = useState('')
@@ -17,16 +18,17 @@ function List({title, tag}) {
     setMessage('')
   }
   return (
+    <>  
     <Container>
       <Header>
       <h2>{title}</h2>
       <ListTag tag={tag}/>
       </Header>
       <Card/>
-
-      <Footer onChange={handleMessage} value={message}/>
-      <Addtask onClick={addMessage}>+</Addtask>
+      <FormAdd handleMessage={handleMessage} message={message} addMessage={addMessage}>
+      </FormAdd>
     </Container>
+    </>
   );
 }
 
