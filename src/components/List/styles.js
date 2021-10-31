@@ -1,13 +1,31 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background-color: #ddd;
-  width: 220px;
-  height: 480px;
-  margin: 4rem;
+  background-color: #F3F4F6;
+  width: 260px;
+  height: 440px;
+  margin: 2rem;
   padding: 1rem;
   border-radius: 10px;
-  overflow: scroll;
+  box-shadow: 4px 4px 10px #333;
+  overflow-y: scroll;
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(74, 73, 70);
+    background: linear-gradient(
+      135deg,
+      rgba(74, 73, 70, 1) 2%,
+      rgba(160, 157, 152, 1) 96%,
+      rgba(165, 162, 157, 1) 100%
+    );
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #ddd;
+  }
 
   h2 {
     text-align: left;
@@ -23,9 +41,17 @@ export const Header = styled.div`
 `;
 
 export const ListTag = styled.div`
-  width: 20px;
-  height: 20px;
-  background-color: red;
+  width: 45px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: ${(props) =>
+    props.tag === 0
+      ? 'black'
+      : props.tag === 1
+      ? 'red'
+      : props.tag === 2
+      ? 'green'
+      : 'blue'};
 `;
 
 export const Footer = styled.textarea`

@@ -14,12 +14,13 @@ function List({title, tag}) {
       message
     }
     api.post('messages', newMessage)
+    setMessage('')
   }
   return (
     <Container>
       <Header>
       <h2>{title}</h2>
-      <ListTag/>
+      <ListTag tag={tag}/>
       </Header>
       <Card/>
 

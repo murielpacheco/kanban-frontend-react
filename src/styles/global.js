@@ -12,7 +12,11 @@ export default createGlobalStyle`
 
   body {
     height: 100vh;
-    background-color: #444;
+    background: rgb(60,130,246);
+    background: linear-gradient(135deg, rgba(60,130,246,1) 4%, rgba(84,238,213,0.981127485173757) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: flex-start;
