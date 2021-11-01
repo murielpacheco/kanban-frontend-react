@@ -1,13 +1,12 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background-color: #f3f4f6;
+  /* background-color: #f3f4f6; */
   width: 260px;
   height: 440px;
   margin: 2rem;
   padding: 1rem;
   border-radius: 10px;
-  box-shadow: 1px 1px 5px rgb(180, 155, 256);
   overflow-y: auto;
   position: relative;
 
@@ -17,9 +16,6 @@ export const Container = styled.div`
   ::-webkit-scrollbar-thumb {
     background: rgb(60, 130, 246);
     border-radius: 4px;
-  }
-  ::-webkit-scrollbar-track {
-    background-color: #ddd;
   }
 
   h2 {
@@ -47,4 +43,11 @@ export const ListTag = styled.div`
       : props.tag === 2
       ? 'green'
       : 'blue'};
+`;
+
+export const ListContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;

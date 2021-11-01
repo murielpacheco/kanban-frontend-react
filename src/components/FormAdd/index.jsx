@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { MessageContext } from '../../contexts/MessageContext';
 
 import { Container,NewTask, AddTask, TextArea} from './styles';
 
-export function FormAdd({handleMessage, message,addMessage}) {
+export function FormAdd() {
+  const {message, handleMessage, addMessage} = useContext(MessageContext)
+  
   const [addTask, setAddTask] = useState(true)
 
   function handleFormTask() {
